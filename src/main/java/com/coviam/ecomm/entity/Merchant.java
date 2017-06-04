@@ -12,7 +12,7 @@ public class Merchant {
     @Id
     @Column(name = "merchantid", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int merchantid;
+    private int id;
 
     @Column(name = "name", nullable = false)
     private String name;
@@ -39,11 +39,11 @@ public class Merchant {
     }
 
     public int getMerchantid() {
-        return merchantid;
+        return id;
     }
 
     public void setMerchantid(int merchantid) {
-        this.merchantid = merchantid;
+        this.id = merchantid;
     }
 
     public String getName() {
@@ -105,7 +105,7 @@ public class Merchant {
     @Override
     public String toString() {
         return "Merchant{" +
-                "merchantid=" + merchantid +
+                "merchantid=" + id +
                 ", name='" + name + '\'' +
                 ", logo='" + logo + '\'' +
                 ", rating=" + rating +

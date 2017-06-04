@@ -43,7 +43,10 @@ public class Product implements Serializable {
     private double rating;
 
     @Column(name = "merchantlist", length = 1024)
-    private Set<String> merchantlist;
+    private List<String> merchantlist;
+
+    @ManyToOne
+    private Category category;
 
     public Product() {
     }
@@ -120,11 +123,11 @@ public class Product implements Serializable {
         this.rating = rating;
     }
 
-    public Set<String> getMerchantlist() {
+    public List<String> getMerchantlist() {
         return merchantlist;
     }
 
-    public void setMerchantlist(Set<String> merchantlist) {
+    public void setMerchantlist(List<String> merchantlist) {
         this.merchantlist = merchantlist;
     }
 
